@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CS202</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+      body {
+        background-color: aqua;
+      }
+      #intro_paragarph {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Introduction to Front End Development</h1>
+    <p id="click">
+      Please click on the below button to read introduction to Front End
+      Development
+    </p>
+    <button id="btn1">Read Introtoduction</button>
+    <div id="intro_paragarph">
+      <p>
+        This course starts with describing front end development on web. Build
+        foundations on Html, CSS and JavaScript, and cover advance topics based
+        on current trends, of Html5, CSS3, Responsive Design and some of its
+        frameworks like Bootstrap. <br />
+        <br />
+        Focus is to learn while solving different problems and doing many real
+        life case studies.
+      </p>
+
+      <ul>
+        Following tools are used to develop front end interface of website:
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+    <br /><br />
+    <button id="btn2">Add List Item</button>
+    <p id="Add_list">
+      Click on the 'Add List Item'button to view JavaSceript libraries.
+    </p>
+    <script>
+      $(document).ready(function () {
+        $("#btn1").click(function () {
+          $(this).css("background-color", "green");
+          $("#click").hide();
+          $("#intro_paragarph").show(1000);
+        });
+
+        $("#btn2").click(function () {
+          $("#btn2").animate({ opacity: 0.3 });
+          $("#Add_list").hide();
+          $("ul").append("<li>Ajax</li>");
+          $("ul").append("<li>JQurey</li>");
+        });
+      });
+    </script>
+  </body>
+</html>
